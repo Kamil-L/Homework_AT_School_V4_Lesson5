@@ -1,5 +1,4 @@
 import java.util.List;
-import java.util.Random;
 
 public class Movie {
 
@@ -12,34 +11,29 @@ public class Movie {
     public Movie() {
     }
 
-    public String getGenre() {
-        return genre;
-    }
-
     public String getTitle() {
         return title;
-    }
-
-    public int getDate() {
-        return date;
     }
 
     public Director getDirector() {
         return director;
     }
 
+    public String getGenre() {
+        return genre;
+    }
+
+    public int getDate() {
+        return date;
+    }
+
     public List<Actor> getActors() {
         return actors;
     }
 
-    public Movie getRandomMovie(List<Movie> movieList) {
-        Random randomMovie = new Random();
-        return movieList.get(randomMovie.nextInt(movieList.size()));
-    }
-
     @Override
     public String toString() {
-        return '\n' + "title: " + getTitle() + '\n' +
+        return "title: " + getTitle() + '\n' +
                 "director: " + getDirector() + '\n' +
                 "genre: " + getGenre() + '\n' +
                 "date: " + getDate() + '\n' +
